@@ -1,32 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Final Project — Week 9</title>
-  <!-- 
-    FINAL PROJECT STARTER TEMPLATE
-    ================================
-    Replace everything below with your project.
-    See README.md for the three project options and all requirements.
-    
-    Choose your option:
-      A) Weather Dashboard
-      B) Task Manager
-      C) Quiz App
-  -->
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SkyCast — Weather Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- Your HTML goes here -->
-  <main style="padding: 4rem; text-align: center; font-family: system-ui, sans-serif;">
-    <h1>🏗️ Final Project</h1>
-    <p>Replace this template with your chosen project. Good luck!</p>
-    <p>Options: <strong>A) Weather Dashboard</strong> · <strong>B) Task Manager</strong> · <strong>C) Quiz App</strong></p>
-    <p>Read <code>README.md</code> for full instructions.</p>
-  </main>
+    <header>
+        <div class="container">
+            <h1>SkyCast 🌤️</h1>
+            <div class="search-box">
+                <input type="text" id="city-input" placeholder="Enter city name..." autocomplete="off">
+                <button id="search-btn">Search</button>
+            </div>
+            <div id="recent-searches" class="chip-container">
+                <!-- Search chips will appear here -->
+            </div>
+        </div>
+    </header>
 
-  <script src="script.js"></script>
+    <main class="container">
+        <!-- Error & Loading States -->
+        <div id="status-message"></div>
+
+        <!-- Current Weather -->
+        <section id="current-weather" class="card hidden">
+            <div class="weather-main">
+                <div class="info">
+                    <h2 id="display-city">City Name</h2>
+                    <p id="display-date">Monday, 12:00</p>
+                    <div class="temp-container">
+                        <span id="temp-value">--</span>
+                        <button id="unit-toggle" title="Toggle C/F">°C</button>
+                    </div>
+                    <p id="weather-desc">Cloudy</p>
+                </div>
+                <div id="weather-icon"></div>
+            </div>
+            <div class="weather-details">
+                <div class="detail-item">
+                    <span>Wind Speed</span>
+                    <strong id="wind-speed">-- km/h</strong>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7-Day Forecast -->
+        <section id="forecast-section" class="hidden">
+            <h3>7-Day Forecast</h3>
+            <div id="forecast-container" class="forecast-grid">
+                <!-- Forecast cards injected by JS -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Week 9 · Final Project · Built with Open-Meteo API</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
