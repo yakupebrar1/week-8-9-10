@@ -1,19 +1,83 @@
-<!-- 
-  Exercise 1: HTML Basics
-  ========================
-  Your job: Fix and complete this HTML document.
-  Read the README.md for full instructions.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Personal profile page and portfolio">
+    <title>My Profile Page | Portfolio</title>
+</head>
+<body>
 
-  TODO Task 1: Add missing document structure (DOCTYPE, html, head, body, title, meta tags)
-  TODO Task 2: Add semantic sections (header, nav, main with three sections)
-  TODO Task 3: Add content (paragraphs, lists, table)
-  TODO Task 4: Add media (images, figure, iframe)
-  TODO Task 5: Ensure accessibility (alt text, heading order, meaningful link text)
--->
+    <!-- Task 2: Semantic Header & Navigation -->
+    <header>
+        <h1>My Profile Page</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#skills">Skills & Education</a></li>
+                <li><a href="#media">Media & Projects</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<!-- DELETE this comment and start your document here -->
+    <main>
+        <!-- Task 2 & 3: Semantic Sections & Content -->
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Hello! I am a student specializing in computer engineering. I enjoy building responsive web applications and exploring digital branding.</p>
+            <p>Currently, I am working on several full-stack projects involving modern frameworks.</p>
+        </section>
 
-  <h1>My Profile Page</h1>
-  <p>About me goes here...</p>
+        <section id="skills">
+            <h2>Skills & Education</h2>
+            <h3>Technical Skills</h3>
+            <ul>
+                <li>Web Development (React, Next.js, Tailwind CSS)</li>
+                <li>Database Management (SQL, SQLite)</li>
+                <li>Programming (C, JavaScript, Python)</li>
+            </ul>
 
-<!-- HINT: This page is broken — it's missing most of its required structure! -->
+            <h3>Education History</h3>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Institution</th>
+                        <th>Degree/Course</th>
+                        <th>Year</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>International Balkan University</td>
+                        <td>Computer Engineering</td>
+                        <td>2022 - Present</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="media">
+            <h2>Media & Projects</h2>
+            <!-- Task 4: Media, Figure, and Iframe -->
+            <figure>
+                <img src="https://via.placeholder.com/400x250" alt="A screenshot of my latest web development project showing a responsive dashboard" width="400">
+                <figcaption>Figure 1: Preview of my recent dashboard project.</figcaption>
+            </figure>
+
+            <h3>Featured Video</h3>
+            <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                title="Project Walkthrough Video"
+                loading="lazy">
+            </iframe>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 My Portfolio. Built with semantic HTML.</p>
+    </footer>
+
+</body>
+</html>
